@@ -5,6 +5,9 @@ const {db} = require('./model/connect.js');
 const {router} = require('./routes/authentication.routes');
 const {SERVER_CONNECTED} = require('./config/messages');
 const {PORT} = require('./config/env');
+const dotenv = require('dotenv')
+dotenv.config();
+
 
 
 const app = express()
