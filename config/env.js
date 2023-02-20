@@ -1,7 +1,7 @@
-const PORT = 9999;
-const JWT_SECRET = 'zxcbvnmakakdjdulro1o124987555@#%$6^ldldkddkkdjrororkf';
+const PORT = process.env.PORT;
+const JWT_SECRET = process.env.JWT_SECRET_KEY;
 const DB = {
-    uri: "mongodb://localhost:27017/login-app-db",
+    uri: process.env.MONGO_URI,
     user: "",
     password: ""
 }
