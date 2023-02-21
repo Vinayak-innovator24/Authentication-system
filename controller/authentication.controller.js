@@ -81,7 +81,7 @@ const register = async (req, res) => {
 		})
 	}
 
-	if(num.length > 10){
+	if(num.length != 10){
 		return res.json({
 			status: 'error',
 			error: 'Mobile Number greater than 10 digits'
@@ -98,11 +98,11 @@ const register = async (req, res) => {
 			emailId,
 			num
 		})
-		console.log('User created successfully: ', response)
+		console.log(`User created successfully with EmailId: ${emailId}`, response)
 	} catch (error) {
 		if (error.code === 11000) {
 			// duplicate key
-			return res.json({ status: 'error', error: 'Username already in use' })
+			return res.json({ status: 'error', error: 'EmailId already in use' })
 		}
 		throw error
 	}
