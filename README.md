@@ -2,7 +2,7 @@ It's a user authentication and management application with the following endpoin
 
 1. User signup - The payload includes the basic details of the user such as the email, mobile number, full name and initial password. Once the data is received at                      the backend, all Personally identifiable data such as email, mobile number and full name are to be encrypted using a strong public key. The                            password must be stored in a hashed format.
 
-2. Reset Password - Accept old and new passwords from the user, verify if the old password is correct, and if it is correct, the new password is syored in a hashed                         format.
+2. Reset Password - Accept old and new passwords from the user, verify if the old password is correct, and if it is correct, the new password is stored in a hashed                         format.
 
 3. Login - Accept the user's email address and password, and return a JWT(JSON web token) with the user ID, email, and mobile number as the token payload.
 
